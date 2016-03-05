@@ -29,7 +29,7 @@ public class test {
 //		System.out.println(a.get(5).getText());
 //		driver.quit();
 	}
-	
+	//
 	private void qq(){
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
