@@ -36,21 +36,36 @@
 					</archive>
 				</configuration>
 			</plugin>
-			
-			<plugin>  
+
+			<!--reportNG-->
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
+				<version>2.5</version>
 				<configuration>
-					<systemPropertyVariables>
-						<testEnvironment>${parameter}</testEnvironment>
-					</systemPropertyVariables>
-					<suiteXmlFiles>
-<!-- 					<suiteXmlFile>${xmlName}</suiteXmlFile> -->
-						<suiteXmlFile>testNG.xml</suiteXmlFile>
-					</suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <testEnvironment>${parameter}</testEnvironment>
+                    </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <!--参数化xml文件名-->
+                        <!--<suiteXmlFile>${xmlName}</suiteXmlFile>-->
+                        <suiteXmlFile>testNG.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+					<properties>
+						<property>
+							<name>usedefaultlisteners</name>
+							<value>false</value>
+						</property>
+						<property>
+							<name>listener</name>
+							<value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
+						</property>
+					</properties>
+					<workingDirectory>target/</workingDirectory>
 				</configuration>
-    		</plugin>
+			</plugin>
+
+
 		</plugins>
 	</build>
 
@@ -80,7 +95,27 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.38</version>
 		</dependency>
-		
-		
+
+		<!--reportNg-->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+
     </dependencies>
 </project>
