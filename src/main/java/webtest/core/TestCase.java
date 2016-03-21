@@ -46,8 +46,8 @@ public class TestCase {
 	@BeforeMethod(alwaysRun = true)
 	@Parameters({"DriverName", "ChromeDriverPath", "IeDriverPath", "FirefoxDriverPath"})
 	protected void testMethodStart(@Optional("firefox") String driverName, 
-			@Optional("src/main/resources/chromedriver.exe") String chromrPath, 
-			@Optional("src/main/resources/IEDriverServer.exe") String iePath, 
+			@Optional("classes/chromedriver.exe") String chromrPath,
+			@Optional("classes/IEDriverServer.exe") String iePath,
 			@Optional("moren") String firefoxPath) {
 		DriverManager.setupDriver(driverName, chromrPath, iePath, firefoxPath);
 		
