@@ -8,12 +8,21 @@
 	<parameter name="mysql_user" value="root" />
 	<parameter name="mysql_pwd" value="nRGSGqK5Ccn3GSTw" />
 
-	<test name="clean">
+	<test name="Test for this frame -- chrome">
+		<parameter name="DriverName" value="chrome" />
 		<classes>
-			<class name="cases.Clean"></class>
+			<class name="cases.DemoTest"></class>
 		</classes>
 	</test>
 
+	<test name="Test for this frame -- ie">
+		<parameter name="DriverName" value="ie" />
+		<classes>
+			<class name="cases.DemoTest"></class>
+		</classes>
+	</test>
+
+	<!--
 	<test name="testfront  Chrome测试谷歌浏览器">
 		<parameter name="DriverName" value="chrome" />
 		<classes>
@@ -26,5 +35,6 @@
 			<class name="cases.front.RechargeTest"></class>
 		</classes>
 	</test>
+	-->
 
 </suite>
