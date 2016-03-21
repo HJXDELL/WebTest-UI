@@ -75,6 +75,12 @@ public class LogEventListener implements WebDriverEventListener {
 	public void afterNavigateForward(WebDriver selenium) {
 	}
 
+	public void beforeNavigateRefresh(WebDriver webDriver) {
+	}
+
+	public void afterNavigateRefresh(WebDriver webDriver) {
+	}
+
 	public void afterNavigateTo(String url, WebDriver selenium) {
 	}
 
