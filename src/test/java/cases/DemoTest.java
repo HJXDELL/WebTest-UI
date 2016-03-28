@@ -4,6 +4,9 @@ import org.testng.annotations.Test;
 import webtest.core.TestCase;
 import webtest.core.page.RequestPage;
 import webtest.core.page.SponsePage;
+import webtest.core.util.PageTool;
+
+import java.util.Date;
 
 /**
  * Created by han on 2016/3/21.

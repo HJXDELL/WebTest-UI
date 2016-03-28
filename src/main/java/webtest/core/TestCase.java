@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import webtest.core.listenner.LogEventListener;
 import webtest.core.util.Mysql;
 
 import static org.testng.Assert.assertEquals;
