@@ -5,7 +5,5 @@ hs_err_pid*
 
 
 target
-.idea/compiler.xml
-.idea/workspace.xml
 .idea
 test.iml
